@@ -100,7 +100,11 @@ Pass a readable stream as params and meta.key. Responds with a readable
 
 ## `v1.syslog.matchStream`
 
-Get readable stream what matchs a wildcard stream.
+Get readable stream that matchs a wildcard key. 
+Key `myhost.*` will stream all logs from the host with the hostname of `myhost`
+Key `*` will stream all avalable streams and any new ones.
+
+https://www.npmjs.com/package/wildcard-match
 
 ### Parameters
 | Property | Type | Default | Description |

@@ -10,7 +10,7 @@
   "author": "FLYBYME",
   "dependencies": {
     "nsyslog-parser": "0.9.6",
-    "wildcard-match": "5.1.2",
+    "wildcard-match": "5.1.2"
   },
   "engines": {
     "node": ">= 12.x.x"

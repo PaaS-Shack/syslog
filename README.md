@@ -41,6 +41,8 @@ broker.start()
 
 | Property | Type | Default | Description |
 | -------- | ---- | ------- | ----------- |
+| `port` | `Number` | 514 | UDP port |
+| `ip` | `String` | 0.0.0.0 | UDP bind IP |
 
 
 # Actions

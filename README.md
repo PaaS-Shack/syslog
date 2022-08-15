@@ -68,3 +68,44 @@ Disable console logging.
 
 ### Results
 **Type:** `<Object>`
+
+## `v1.syslog.getLog`
+
+Disable console logging.
+
+### Parameters
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `key` | `String` | **required** | Log key ${hostname}.${service}. |
+
+### Results
+**Type:** `<Object>`
+
+## `v1.syslog.getStream`
+
+Pass a readable stream as params and meta.key. Responds with a readable
+
+### Metadata
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `key` | `String` | **required** | Log key ${hostname}.${service}. |
+
+### Parameters 
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| - | `ReadStream` | **required** | Log key ${hostname}.${service}. |
+
+### Results
+**Type:** `<ReadStream>`
+
+## `v1.syslog.matchStream`
+
+Get readable stream what matchs a wildcard stream.
+
+### Parameters
+| Property | Type | Default | Description |
+| -------- | ---- | ------- | ----------- |
+| `key` | `String` | **required** | Wild card key |
+
+### Results
+**Type:** `<ReadStream>`

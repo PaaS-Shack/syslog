@@ -1,0 +1,19 @@
+{
+  "name": "syslog",
+  "version": "1.0.0",
+  "description": "molecularjs Syslog agent",
+  "scripts": {},
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "FLYBYME",
+  "dependencies": {
+    "nsyslog-parser": "0.9.6",
+    "wildcard-match": "5.1.2",
+  },
+  "engines": {
+    "node": ">= 12.x.x"
+  },
+  "jest": {}
+}

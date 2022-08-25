@@ -133,7 +133,7 @@ module.exports = {
 
                 if (!key) {
                     for (const [_key, store] of this.stores.entries()) {
-                        store.enableConsole()
+                        store.disableConsole()
                     }
                     return true;
                 }

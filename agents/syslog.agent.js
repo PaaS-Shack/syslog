@@ -355,8 +355,6 @@ module.exports = {
      * Service started lifecycle event handler
      */
     started() {
-        if (this.settings.server === false)
-            return this.Promise.resolve();
 
         /* istanbul ignore next */
         return new this.Promise((resolve, reject) => {

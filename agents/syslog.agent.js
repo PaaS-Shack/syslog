@@ -330,23 +330,22 @@ module.exports = {
 
         this.streams = []
 
-        if (this.settings.server !== false) {
 
-            this.createServer();
+        this.createServer();
 
-            /* istanbul ignore next */
-            this.server.on("error", err => {
-                this.logger.error("Server error", err);
-            });
+        /* istanbul ignore next */
+        this.server.on("error", err => {
+            this.logger.error("Server error", err);
+        });
 
-            this.server.on('message', async (msg, rinfo) => {
+        this.server.on('message', async (msg, rinfo) => {
 
-                const result = await this.actions.message({ msg, rinfo }, {});
+            const result = await this.actions.message({ msg, rinfo }, {});
 
-            })
+        })
 
-            this.logger.info("Syslog server created.");
-        }
+        this.logger.info("Syslog server created.");
+
 
     },
 

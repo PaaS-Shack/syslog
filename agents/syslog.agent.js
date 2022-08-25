@@ -47,7 +47,7 @@ module.exports = {
 
     // Default service name
     name: "syslog.agent",
-    
+
     version: 1,
 
     // Default settings
@@ -103,11 +103,20 @@ module.exports = {
         },
         enableConsole: {
             params: {
-                key: { type: "string", optional: false },
+                key: { type: "string", optional: true },
             },
             timeout: 0,
             async handler(ctx) {
                 const { key } = Object.assign({}, ctx.params);
+
+                if (!key) {
+                    for (const [_key, store] of this.stores.entries()) {
+                        store.enableConsole()
+                    }
+                    return true;
+                }
+
+
                 if (!this.stores.has(key)) {
                     throw Error(`Key not found ${key}`)
                 }
@@ -116,11 +125,19 @@ module.exports = {
         },
         disableConsole: {
             params: {
-                key: { type: "string", optional: false },
+                key: { type: "string", optional: true },
             },
             timeout: 0,
             async handler(ctx) {
                 const { key } = Object.assign({}, ctx.params);
+
+                if (!key) {
+                    for (const [_key, store] of this.stores.entries()) {
+                        store.enableConsole()
+                    }
+                    return true;
+                }
+
                 if (!this.stores.has(key)) {
                     throw Error(`Key not found ${key}`)
                 }

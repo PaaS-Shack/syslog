@@ -382,19 +382,14 @@ module.exports = {
         }
 
 
-        if (this.settings.server !== false) {
-            /* istanbul ignore next */
-            return new this.Promise((resolve, reject) => {
-                this.server.close(err => {
-                    if (err)
-                        return reject(err);
+        return new this.Promise((resolve, reject) => {
+            this.server.close(err => {
+                if (err)
+                    return reject(err);
 
-                    this.logger.info("Syslog stopped!");
-                    resolve();
-                });
+                this.logger.info("Syslog stopped!");
+                resolve();
             });
-        }
-
-        return this.Promise.resolve();
+        });
     },
 }

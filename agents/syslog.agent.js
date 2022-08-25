@@ -8,7 +8,7 @@ class Store {
     constructor(info) {
         this.info = info;
         this.key = info.key;
-        this.consoleLog = false;
+        this.consoleLog = true;
 
         this.logs = [];
         this.maxStore = 50;
